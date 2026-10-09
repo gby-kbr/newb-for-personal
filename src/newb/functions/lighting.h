@@ -68,8 +68,8 @@ vec3 nlLighting(
 
     // shadow cast by sun light
     float shadow = step(0.93, uv1.y);
-    shadow = max(shadow, (1.0 - NL_SHADOW_INTENSITY + (0.6*NL_SHADOW_INTENSITY*nightIntensity))*lit.y);
-    shadow *= shade > 0.8 ? 1.0 : 0.8;
+    shadow = max(shadow, (0.5 - NL_SHADOW_INTENSITY + (0.5*NL_SHADOW_INTENSITY*nightIntensity))*lit.y);
+    shadow *= shade > 0.8 ? 1.0 : 0.5;
     #if defined(NL_CLOUD_SHADOW) && (NL_CLOUD_TYPE == 1 || NL_CLOUD_TYPE == 2)
       vec3 mainLightDir = env.sunDir.y > 0.0 ? env.sunDir : env.moonDir;
       vec3 gPos = wPos + CAMERA_POS;
@@ -114,7 +114,7 @@ vec3 nlLighting(
 
   // brighten tree leaves
   if (isTree) {
-    light *= 1.25;
+    light *= 1.1;
   }
 
   return light;
