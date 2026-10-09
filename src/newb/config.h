@@ -24,7 +24,7 @@
 
 /* Sun/moon light color */
 #define NL_DAWN_SUNLIGHT_COL   vec3(1.0,0.4,0.1)
-#define NL_NOON_SUNLIGHT_COL   vec3(1.0,0.75,0.57)
+#define NL_NOON_SUNLIGHT_COL   vec3(0.95,0.95,1.0)
 #define NL_NIGHT_MOONLIGHT_COL vec3(0.01,0.03,0.2)
 
 /* Torch colors */
@@ -40,26 +40,30 @@
 //#define NL_CLOUDY_FOG 0.1         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky */
-#define NL_SKY_VOID_FACTOR     0.5
-#define NL_SKY_VOID_DARKNESS   0.3
-#define NL_SKY_RAIN_MIX_FACTOR 0.9
+#define NL_SKY_VOID_FACTOR     0.4
+#define NL_SKY_VOID_DARKNESS   0.0
+#define NL_SKY_RAIN_MIX_FACTOR 1.0
 
 /* Sky colors - zenith=top, horizon=bottom */
-#define NL_DAWN_ZENITH_COL   vec3(0.1,0.4,0.7)
-#define NL_DAWN_HORIZON_COL  vec3(3.0,0.4,0.4)
-#define NL_DAWN_EDGE_COL     vec3(2.0,0.8,0.8)
-#define NL_DAY_ZENITH_COL    vec3(0.3,0.9,2.0)
-#define NL_DAY_HORIZON_COL   vec3(1.0,1.6,1.8)
-#define NL_DAY_EDGE_COL      vec3(1.44,1.56,1.62)
-#define NL_NIGHT_ZENITH_COL  vec3(0.008,0.048,0.08)
-#define NL_NIGHT_HORIZON_COL vec3(0.02,0.06,0.1)
-#define NL_NIGHT_EDGE_COL    vec3(0.04,0.08,0.1)
-#define NL_RAIN_ZENITH_COL   vec3(0.47,0.51,0.56)
-#define NL_RAIN_HORIZON_COL  vec3(0.6,0.6,0.6)
+#define NL_DAWN_ZENITH_COL   vec3(0.08,0.25,0.65)
+#define NL_DAWN_HORIZON_COL  vec3(3.0,0.28,0.12)
+#define NL_DAWN_EDGE_COL     vec3(2.5,0.55,0.25)
+#define NL_DAWN_SPREAD 1.0
+#define NL_POW_DAWN_EDGE 1.0
 
-#define NL_END_ZENITH_COL    vec3(0.08,0.001,0.1)
-#define NL_END_HORIZON_COL   vec3(0.6,0.02,0.6)
+#define NL_DAY_ZENITH_COL    vec3(0.2,1.2,2.8)
+#define NL_DAY_HORIZON_COL   vec3(0.25,1.6,2.4)
+#define NL_DAY_EDGE_COL      vec3(1.2,2.0,2.5)
 
+#define NL_NIGHT_ZENITH_COL  vec3(0.025,0.075,0.16)
+#define NL_NIGHT_HORIZON_COL vec3(0.045,0.13,0.23)
+#define NL_NIGHT_EDGE_COL    vec3(0.08,0.19,0.30)
+
+#define NL_RAIN_ZENITH_COL   vec3(0.25,0.25,0.25)
+#define NL_RAIN_HORIZON_COL  vec3(0.5,0.5,0.5)
+
+#define NL_END_ZENITH_COL    vec3(0.12,0.002,0.28)
+#define NL_END_HORIZON_COL   vec3(0.85,0.015,0.75)
 
 /* Rainbow */
 //#define NL_RAINBOW           // [toggle] enable rainbow in sky
